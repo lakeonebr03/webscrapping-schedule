@@ -2,7 +2,7 @@ name: run ws.py
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '* 3 * * *'
 
 jobs:
   run_schedule:
@@ -20,6 +20,6 @@ jobs:
 
       - name: executar arquivo de scrapping
         env:
-          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          TOKEN_01: ${{ secrets.TOKEN_01 }}
         run: python ws.py
 
